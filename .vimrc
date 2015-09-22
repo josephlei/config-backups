@@ -12,19 +12,28 @@ set autoindent					"retain indent level
 set showcmd					"show pending cmds
 set number					"add line numbers
 set incsearch
-
-colorscheme Monokai-refined
+"set hlsearch "temporarily disable while researching
 
 let mapleader=","				"set mapleader
+
+"change theme shortcuts
+nnoremap <leader>1 :colorscheme Monokai-refined<CR>
+nnoremap <leader>2 :colorscheme obsidian<CR>
 
 "quickly edit/reload .vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-:nnoremap <leader>w :w<CR>
-:nnoremap <leader>wq :wq<CR>
-:nnoremap <leader>q :q<CR>
+"quick write/quit commands
+nnoremap <leader>w :w<CR>
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>q :q<CR>
 
+"remap movement to move by column layout for long lines
+nnoremap j gj
+nnoremap k gk
+
+"disable arrow keys
 noremap <Up>    <NOP>
 noremap <Down>  <NOP>
 noremap <Left>  <NOP>
