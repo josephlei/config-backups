@@ -1,20 +1,31 @@
 "jjl's vimrc file
 
-set nocompatible				"just a good idea? to be investigated
+"eliminate compatability with vi, not necessary
+set nocompatible
 
+"close security exploits
+set modelines=0
+
+"set shortcut to exit insert mode
+inoremap jj <ESC>
+
+"enable syntax highlighting, the diff between on and enable, enable will keep your current color settings, on will override them
 syntax enable
 "syntax on
-"diff between on and enable, enable will keep your current color settings, on will override them
-
-"--------------------------------------------------"
 
 set autoindent					"retain indent level
 set showcmd					"show pending cmds
 set number					"add line numbers
 set incsearch
-"set hlsearch "temporarily disable while researching
+set ruler					"turn on ruler
+set relativenumber				"turn on relative line numbers
 
+set hlsearch "temporarily disable while researching
 let mapleader=","				"set mapleader
+"=============================================================================
+
+"map leader spacebar to clear highlighting
+nnoremap <leader><space> :noh<cr>
 
 "change theme shortcuts
 nnoremap <leader>1 :colorscheme Monokai-refined<CR>
@@ -33,6 +44,9 @@ nnoremap <leader>q :q<CR>
 nnoremap j gj
 nnoremap k gk
 
+"from coming home to vim, takes the line and puts a divider under it
+nnoremap <leader>` yypVr=
+
 "disable arrow keys
 noremap <Up>    <NOP>
 noremap <Down>  <NOP>
@@ -41,3 +55,5 @@ noremap <Right> <NOP>
 
 "nnoremap ; :  "this makes exiting easier, or does it? inactive
 set nolist "set listchars=tab:>.,nbsp:.
+
+:map <F2> i<cr><esc>
