@@ -82,12 +82,11 @@ set nolist "set listchars=tab:>.,nbsp:.
 "puts double quotes around the word you're on
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
+
+
 "exit from insert mode with j and k, or <,> m
 :inoremap jk <ESC>
 :inoremap <leader>m <esc>
-
-"disable esc key in insert mode, use letters j + k instead
-:inoremap <esc> <nop>
 
 "reset search term on sourcing vimrc
 :let @/ = ""
