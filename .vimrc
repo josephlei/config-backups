@@ -92,3 +92,9 @@ set nolist "set listchars=tab:>.,nbsp:.
 :let @/ = ""
 
 :autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+
+"auto source ~/.vimrc upon saving
+augroup reload_vimrc " {
+    autocmd!
+        autocmd BufWritePost $MYVIMRC source $MYVIMRC
+	augroup END " }
