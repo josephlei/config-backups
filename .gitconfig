@@ -1,0 +1,28 @@
+[user]
+	email = josephlei@users.noreply.github.com
+	name = Joseph L
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[color]
+	ui = auto
+
+[color "diff"]
+	frag = blue yellow #anchors like @@ -1,3 +1,5 @@
+	#meta = white white
+	new = blue green
+	old = black red
+
+[color "status"]
+	header = green
+	added = blue green
+	changed = white
+	#untracked =
+	branch = cyan
+	#unmerged =
